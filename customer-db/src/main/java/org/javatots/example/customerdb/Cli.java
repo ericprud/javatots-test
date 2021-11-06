@@ -8,7 +8,7 @@ import java.io.StringWriter;
 
 public class Cli {
     public static void main(String[] args) throws FileNotFoundException {
-        final String dir = "src/main/resources/";
+        final String dir = "customer-db/src/main/resources/";
         Customer c = new Cli().loadCustomer(dir + "customer.yaml");
         System.out.println(c);
         StringWriter writer = new StringWriter();
