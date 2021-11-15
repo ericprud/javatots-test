@@ -1,1 +1,6 @@
 target/
+/asTypescript/node_modules/
+/asTypescript/packages/custapp/tsconfig.package.tsbuildinfo
+/asTypescript/packages/custdb/package-lock.json
+/asTypescript/packages/custdb/tsconfig.package.tsbuildinfo
+/asTypescript/package-lock.json
