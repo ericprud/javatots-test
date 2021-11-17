@@ -1,7 +1,4 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb
-import { List } from java.util;
-import { Map } from java.util;
-
 export class Customer {
 
    private firstName: String;
@@ -10,7 +7,7 @@ export class Customer {
 
    private age: int;
 
-   private contacts: List<Voicable>;
+   private contacts: Array<Voicable>;
 
    private addresses: Map<String, Address>;
 
@@ -43,11 +40,11 @@ export class Customer {
     return this.age;
   }
 
-  public setContacts(contacts: List<Voicable>): void {
+  public setContacts(contacts: Array<Voicable>): void {
     this.contacts = contacts;
   }
 
-  public getContacts(): List<Voicable> {
+  public getContacts(): Array<Voicable> {
     return this.contacts;
   }
 

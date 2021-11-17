@@ -1,6 +1,4 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb
-import { List } from java.util;
-
 export class Address {
 
    private type: String;
@@ -13,7 +11,7 @@ export class Address {
 
    private zip: Integer;
 
-   private siteContacts: List<Voicable>;
+   private siteContacts: Array<Voicable>;
 
   public toString(): String {
     return "Address{" + "type='" + type + '\'' + ", line='" + line + '\'' + ", city='" + city + '\'' + ", state='" + state + '\'' + ", zip=" + zip + ", siteContacts=" + siteContacts + '}';
@@ -60,11 +58,11 @@ export class Address {
     return this.zip;
   }
 
-  public setSiteContacts(siteContacts: List<Voicable>): void {
+  public setSiteContacts(siteContacts: Array<Voicable>): void {
     this.siteContacts = siteContacts;
   }
 
-  public getSiteContacts(): List<Voicable> {
+  public getSiteContacts(): Array<Voicable> {
     return this.siteContacts;
   }
 }
