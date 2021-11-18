@@ -1,6 +1,6 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb.models
-import { Voicable } from './Voicable';
 import { Address } from './Address';
+import { Voicable } from './Voicable';
 
 export class Customer {
 
