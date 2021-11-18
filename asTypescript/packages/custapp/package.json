@@ -15,5 +15,8 @@
   "scripts": {
     "build": "tsc -b ./tsconfig.package.json",
     "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "@types/js-yaml": "^4.0.4"
   }
 }

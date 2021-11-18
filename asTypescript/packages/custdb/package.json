@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/js-yaml": "^4.0.4",
     "js-yaml": "^4.1.0"
   }
 }

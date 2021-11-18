@@ -37,8 +37,12 @@
     "@cust-package/custapp": "file:packages/custapp"
   },
   "scripts": {
-    "build": "for d in packages/{custdb,custapp}/; do (cd $d &&  tsc -b tsconfig.package.json); done",
+    "build": "npm run build-custdb && npm run build-custapp",
+    "build-custdb": "cd packages/custdb/ &&  tsc -b tsconfig.package.json",
+    "build-custapp": "cd packages/custapp/ &&  tsc -b tsconfig.package.json",
+    "run": "cd packages/custapp/ && node lib/customerapp/Main",
+    "debug": "cd packages/custapp/ && node --inspect-brk lib/customerapp/Main",
     "clean": "rm -r packages/{custdb,custapp}/lib/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && npm run run"
   }
 }
