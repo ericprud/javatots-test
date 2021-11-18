@@ -4,34 +4,34 @@ import { Address } from './Address';
 
 export class Customer {
 
-   private firstName: String;
+   private firstName: string;
 
-   private lastName: String;
+   private lastName: string;
 
    private age: number;
 
    private contacts: Array<Voicable>;
 
-   private addresses: Map<String, Address>;
+   private addresses: Map<string, Address>;
 
-  public toString(): String {
+  public tostring(): string {
     return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
   }
 
   // getters and setters
-  public setFirstName(firstName: String): void {
+  public setFirstName(firstName: string): void {
     this.firstName = firstName;
   }
 
-  public getFirstName(): String {
+  public getFirstName(): string {
     return this.firstName;
   }
 
-  public setLastName(lastName: String): void {
+  public setLastName(lastName: string): void {
     this.lastName = lastName;
   }
 
-  public getLastName(): String {
+  public getLastName(): string {
     return this.lastName;
   }
 
@@ -51,11 +51,11 @@ export class Customer {
     return this.contacts;
   }
 
-  public setAddresses(addresses: Map<String, Address>): void {
+  public setAddresses(addresses: Map<string, Address>): void {
     this.addresses = addresses;
   }
 
-  public getAddresses(): Map<String, Address> {
+  public getAddresses(): Map<string, Address> {
     return this.addresses;
   }
 }

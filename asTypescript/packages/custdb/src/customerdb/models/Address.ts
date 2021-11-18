@@ -3,52 +3,52 @@ import { Voicable } from './Voicable';
 
 export class Address {
 
-   private type: String;
+   private type: string;
 
-   private line: String;
+   private line: string;
 
-   private city: String;
+   private city: string;
 
-   private state: String;
+   private state: string;
 
    private zip: number;
 
    private siteContacts: Array<Voicable>;
 
-  public toString(): String {
+  public tostring(): string {
     return "Address{" + "type='" + this.type + '\'' + ", line='" + this.line + '\'' + ", city='" + this.city + '\'' + ", state='" + this.state + '\'' + ", zip=" + this.zip + ", siteContacts=" + this.siteContacts + '}';
   }
 
   // getters and setters
-  public setType(type: String): void {
+  public setType(type: string): void {
     this.type = type;
   }
 
-  public getType(): String {
+  public getType(): string {
     return this.type;
   }
 
-  public setLine(line: String): void {
+  public setLine(line: string): void {
     this.line = line;
   }
 
-  public getLine(): String {
+  public getLine(): string {
     return this.line;
   }
 
-  public setCity(city: String): void {
+  public setCity(city: string): void {
     this.city = city;
   }
 
-  public getCity(): String {
+  public getCity(): string {
     return this.city;
   }
 
-  public setState(state: String): void {
+  public setState(state: string): void {
     this.state = state;
   }
 
-  public getState(): String {
+  public getState(): string {
     return this.state;
   }
 

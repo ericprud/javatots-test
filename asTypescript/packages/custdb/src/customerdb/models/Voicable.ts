@@ -1,20 +1,20 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb.models
 export class Voicable {
 
-   private type: String;
+   private type: string;
 
    private number: number;
 
-  public toString(): String {
+  public tostring(): string {
     return "Voicable{" + "type='" + this.type + '\'' + ", number=" + this.number + '}';
   }
 
   // getters and setters
-  public setType(type: String): void {
+  public setType(type: string): void {
     this.type = type;
   }
 
-  public getType(): String {
+  public getType(): string {
     return this.type;
   }
 
