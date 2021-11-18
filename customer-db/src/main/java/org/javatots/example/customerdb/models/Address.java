@@ -1,4 +1,4 @@
-package org.javatots.example.customerdb;
+package org.javatots.example.customerdb.models;
 
 import lombok.Getter;
 import lombok.Setter;

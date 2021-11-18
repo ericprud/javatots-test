@@ -1,4 +1,4 @@
-// Corresponding javatots-test package: org.javatots.example.customerdb
+// Corresponding javatots-test package: org.javatots.example.customerdb.models
 export class Customer {
 
    private firstName: String;

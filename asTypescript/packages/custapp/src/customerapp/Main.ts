@@ -1,4 +1,5 @@
 // Corresponding javatots-test package: org.javatots.example.customerapp
+import { Customer } from org.javatots.example.customerdb.models;
 import { Yaml } from org.yaml.snakeyaml;
 import { FileInputStream } from java.io;
 import { FileNotFoundException } from java.io;

@@ -1,9 +1,7 @@
 package org.javatots.example.customerapp;
 
 import lombok.SneakyThrows;
-import org.javatots.example.customerdb.Address;
-import org.javatots.example.customerdb.Customer;
-import org.javatots.example.customerdb.Voicable;
+import org.javatots.example.customerdb.models.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -1,5 +1,6 @@
 package org.javatots.example.customerdb;
 
+import org.javatots.example.customerdb.models.Customer;
 import org.yaml.snakeyaml.Yaml;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

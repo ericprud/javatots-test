@@ -1,6 +1,7 @@
 package org.javatots.example.customerdb;
 
 import lombok.SneakyThrows;
+import org.javatots.example.customerdb.models.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
