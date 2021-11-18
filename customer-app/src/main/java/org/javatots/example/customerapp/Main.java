@@ -18,10 +18,4 @@ public class Main {
         new Yaml().dump(c, writer);
         System.out.println(writer);
     }
-
-    public Customer loadCustomer(final String yamlFilePath) throws FileNotFoundException {
-        Yaml yaml = new Yaml();
-        InputStream inputStream = new FileInputStream(yamlFilePath);
-        return yaml.loadAs(inputStream, Customer.class);
-    }
 }
