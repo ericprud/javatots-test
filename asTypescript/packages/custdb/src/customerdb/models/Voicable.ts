@@ -3,10 +3,10 @@ export class Voicable {
 
    private type: String;
 
-   private number: int;
+   private number: number;
 
   public toString(): String {
-    return "Voicable{" + "type='" + type + '\'' + ", number=" + number + '}';
+    return "Voicable{" + "type='" + this.type + '\'' + ", number=" + this.number + '}';
   }
 
   // getters and setters
@@ -18,11 +18,11 @@ export class Voicable {
     return this.type;
   }
 
-  public setNumber(number: int): void {
+  public setNumber(number: number): void {
     this.number = number;
   }
 
-  public getNumber(): int {
+  public getNumber(): number {
     return this.number;
   }
 }

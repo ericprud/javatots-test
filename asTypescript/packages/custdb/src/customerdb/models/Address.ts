@@ -1,4 +1,6 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb.models
+import { Voicable } from './Voicable';
+
 export class Address {
 
    private type: String;
@@ -9,12 +11,12 @@ export class Address {
 
    private state: String;
 
-   private zip: Integer;
+   private zip: number;
 
    private siteContacts: Array<Voicable>;
 
   public toString(): String {
-    return "Address{" + "type='" + type + '\'' + ", line='" + line + '\'' + ", city='" + city + '\'' + ", state='" + state + '\'' + ", zip=" + zip + ", siteContacts=" + siteContacts + '}';
+    return "Address{" + "type='" + this.type + '\'' + ", line='" + this.line + '\'' + ", city='" + this.city + '\'' + ", state='" + this.state + '\'' + ", zip=" + this.zip + ", siteContacts=" + this.siteContacts + '}';
   }
 
   // getters and setters
@@ -50,11 +52,11 @@ export class Address {
     return this.state;
   }
 
-  public setZip(zip: Integer): void {
+  public setZip(zip: number): void {
     this.zip = zip;
   }
 
-  public getZip(): Integer {
+  public getZip(): number {
     return this.zip;
   }
 

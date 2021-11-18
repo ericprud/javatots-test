@@ -1,18 +1,21 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb.models
+import { Voicable } from './Voicable';
+import { Address } from './Address';
+
 export class Customer {
 
    private firstName: String;
 
    private lastName: String;
 
-   private age: int;
+   private age: number;
 
    private contacts: Array<Voicable>;
 
    private addresses: Map<String, Address>;
 
   public toString(): String {
-    return "Customer{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", age=" + age + ", contacts=" + contacts + ", addresses=" + addresses + '}';
+    return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
   }
 
   // getters and setters
@@ -32,11 +35,11 @@ export class Customer {
     return this.lastName;
   }
 
-  public setAge(age: int): void {
+  public setAge(age: number): void {
     this.age = age;
   }
 
-  public getAge(): int {
+  public getAge(): number {
     return this.age;
   }
 

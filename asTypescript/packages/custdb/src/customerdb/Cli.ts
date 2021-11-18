@@ -1,25 +1,30 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb
-import { Customer } from org.javatots.example.customerdb.models;
-import { Yaml } from org.yaml.snakeyaml;
-import { FileInputStream } from java.io;
-import { FileNotFoundException } from java.io;
-import { InputStream } from java.io;
-import { StringWriter } from java.io;
+import { Customer } from './models/Customer';
+// import { Yaml } from org.yaml.snakeyaml;
+import * as Yaml from 'js-yaml';
+// import { FileInputStream } from java.io;
+import * as Fs from 'fs';
+// import { FileNotFoundException } from java.io;
+// import { InputStream } from java.io;
+import { Readable } from 'stream';
+// import { StringWriter } from java.io;
+import { Writable } from 'stream';
 
 export class Cli {
 
-  public static main(args: String[]): void /* throws FileNotFoundException */ {
-    const dir: String = "customer-db/src/main/resources/";
-    c: Customer = new Cli().loadCustomer(dir + "customer.yaml");
-    System.out.println(c);
-    writer: StringWriter = new StringWriter();
-    new Yaml().dump(c, writer);
-    System.out.println(writer);
+  public static main(args: string[]): void /* throws FileNotFoundException */ {
+    const dir: string = "../../../" + "customer-db/src/main/resources/";
+    const c: Customer = new Cli().loadCustomer(dir + "customer.yaml");
+    console.log(c);
+    const writer: Writable = new Writable();
+    // new Yaml().dump(c, writer);
+    // console.log(writer);
   }
 
-  public loadCustomer(readonly yamlFilePath: String): Customer /* throws FileNotFoundException */ {
-    yaml: Yaml = new Yaml();
-    inputStream: InputStream = new FileInputStream(yamlFilePath);
-    return yaml.loadAs(inputStream, Customer.class);
+  public loadCustomer(/* readonly */ yamlFilePath: string): Customer /* throws FileNotFoundException */ {
+    // const yaml: Yaml = new Yaml();
+    const inputStream: Readable = Fs.createReadStream(yamlFilePath);
+    return Yaml.load(Fs.readFileSync(yamlFilePath, 'utf-8')) as Customer;
+    // return yaml.loadAs(inputStream, {});
   }
 }
