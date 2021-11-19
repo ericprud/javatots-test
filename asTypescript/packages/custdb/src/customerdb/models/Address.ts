@@ -15,7 +15,7 @@ export class Address {
 
    private siteContacts: Array<Voicable>;
 
-  public tostring(): string {
+  public toString(): string {
     return "Address{" + "type='" + this.type + '\'' + ", line='" + this.line + '\'' + ", city='" + this.city + '\'' + ", state='" + this.state + '\'' + ", zip=" + this.zip + ", siteContacts=" + this.siteContacts + '}';
   }
 

@@ -14,7 +14,7 @@ export class Customer {
 
    private addresses: Map<string, Address>;
 
-  public tostring(): string {
+  public toString(): string {
     return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
   }
 

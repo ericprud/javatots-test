@@ -5,7 +5,7 @@ export class Voicable {
 
    private number: number;
 
-  public tostring(): string {
+  public toString(): string {
     return "Voicable{" + "type='" + this.type + '\'' + ", number=" + this.number + '}';
   }
 
