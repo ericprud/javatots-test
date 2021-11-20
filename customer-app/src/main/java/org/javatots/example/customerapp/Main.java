@@ -1,6 +1,6 @@
 package org.javatots.example.customerapp;
 
-import org.javatots.example.customerdb.*;
+import org.javatots.example.customerdb.Cli;
 import org.javatots.example.customerdb.models.Customer;
 import org.yaml.snakeyaml.Yaml;
 
