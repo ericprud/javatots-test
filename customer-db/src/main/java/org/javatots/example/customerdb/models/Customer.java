@@ -19,11 +19,11 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", contacts=" + contacts +
-                ", addresses=" + addresses +
+                "firstName='" + this.firstName + '\'' +
+                ", lastName='" + this.lastName + '\'' +
+                ", age=" + this.age +
+                ", contacts=" + this.contacts +
+                ", addresses=" + this.addresses +
                 '}';
     }
 

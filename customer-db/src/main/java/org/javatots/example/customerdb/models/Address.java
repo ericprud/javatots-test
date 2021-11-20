@@ -19,12 +19,12 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "type='" + type + '\'' +
-                ", line='" + line + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", siteContacts=" + siteContacts +
+                "type='" + this.type + '\'' +
+                ", line='" + this.line + '\'' +
+                ", city='" + this.city + '\'' +
+                ", state='" + this.state + '\'' +
+                ", zip=" + this.zip +
+                ", siteContacts=" + this.siteContacts +
                 '}';
     }
 // getters and setters

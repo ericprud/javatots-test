@@ -8,11 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.StringWriter;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(final String[] args) throws FileNotFoundException {
         final String dir = "customer-db/src/main/resources/";
-        Customer c = loadCustomer(dir + "customer.yaml");
+        final Customer c = loadCustomer(dir + "customer.yaml");
         System.out.println(c);
-        StringWriter writer = new StringWriter();
+        final StringWriter writer = new StringWriter();
         new Yaml().dump(c, writer);
         System.out.println(writer);
     }

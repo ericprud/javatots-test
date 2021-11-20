@@ -15,7 +15,7 @@ class MainTest {
     public void
     loadCustomer() {
         final String dir = "../customer-db/src/main/resources/";
-        Customer customer = Main.loadCustomer(dir + "customer.yaml");
+        final Customer customer = Main.loadCustomer(dir + "customer.yaml");
 
         assertNotNull(customer);
         assertEquals("John", customer.getFirstName());

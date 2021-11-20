@@ -12,8 +12,8 @@ public class Voicable {
     @Override
     public String toString() {
         return "Voicable{" +
-                "type='" + type + '\'' +
-                ", number=" + number +
+                "type='" + this.type + '\'' +
+                ", number=" + this.number +
                 '}';
     }
     // getters and setters

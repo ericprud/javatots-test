@@ -15,7 +15,7 @@ class CliTest {
     public void
     loadCustomer() {
 
-        Customer customer = new Cli().loadCustomer("src/main/resources/customer.yaml");
+        final Customer customer = new Cli().loadCustomer("src/main/resources/customer.yaml");
 
         assertNotNull(customer);
         assertEquals("John", customer.getFirstName());

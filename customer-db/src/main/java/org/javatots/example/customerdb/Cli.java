@@ -8,18 +8,18 @@ import java.io.InputStream;
 import java.io.StringWriter;
 
 public class Cli {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(final String[] args) throws FileNotFoundException {
         final String dir = "customer-db/src/main/resources/";
-        Customer c = new Cli().loadCustomer(dir + "customer.yaml");
+        final Customer c = new Cli().loadCustomer(dir + "customer.yaml");
         System.out.println(c);
-        StringWriter writer = new StringWriter();
+        final StringWriter writer = new StringWriter();
         new Yaml().dump(c, writer);
         System.out.println(writer);
     }
 
     public Customer loadCustomer(final String yamlFilePath) throws FileNotFoundException {
-        Yaml yaml = new Yaml();
-        InputStream inputStream = new FileInputStream(yamlFilePath);
+        final Yaml yaml = new Yaml();
+        final InputStream inputStream = new FileInputStream(yamlFilePath);
         return yaml.loadAs(inputStream, Customer.class);
     }
 }
