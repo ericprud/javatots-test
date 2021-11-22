@@ -6,6 +6,8 @@ import lombok.Setter;
 import java.util.List;
 import java.util.Map;
 
+import org.javatots.example.customerdb.Constants;
+
 @Getter
 @Setter
 public class Customer {
@@ -25,6 +27,10 @@ public class Customer {
                 ", contacts=" + this.contacts +
                 ", addresses=" + this.addresses +
                 '}';
+    }
+
+    public boolean checkFoo(final String foo) {
+        return Constants.Foo.equals(foo);
     }
 
     // getters and setters

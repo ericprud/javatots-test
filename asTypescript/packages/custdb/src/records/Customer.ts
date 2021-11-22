@@ -1,4 +1,5 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb.models
+import { Constants } from '../Constants';
 import { Address } from './Address';
 import { Voicable } from './Voicable';
 
@@ -16,6 +17,10 @@ export class Customer {
 
   public toString(): string {
     return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
+  }
+
+  public checkFoo(readonly foo: string): boolean {
+    return Constants.Foo.equals(foo);
   }
 
   // getters and setters
