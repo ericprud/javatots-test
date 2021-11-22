@@ -1,5 +1,5 @@
 // Corresponding javatots-test package: org.javatots.example.customerdb
-import { Customer } from './models/Customer';
+import { Customer } from './records/Customer';
 import * as Yaml from 'js-yaml';
 import * as Fs from 'fs';
 import { Readable } from 'stream';

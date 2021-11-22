@@ -1,6 +1,6 @@
 // Corresponding javatots-test package: org.javatots.example.customerapp
-import { Cli } from '../../../custdb/lib/customerdb/Cli';
-import { Customer } from '../../../custdb/lib/customerdb/models/Customer';
+import { Cli } from '@custdb/Cli';
+import { Customer } from '@custdb/records/Customer';
 import * as Yaml from 'js-yaml';
 import { Writable } from 'stream';
 
