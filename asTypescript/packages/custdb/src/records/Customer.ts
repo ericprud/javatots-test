@@ -19,8 +19,8 @@ export class Customer {
     return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
   }
 
-  public checkFoo(readonly foo: string): boolean {
-    return Constants.Foo.equals(foo);
+  public checkFoo(/* const */ foo: string): boolean {
+    return Constants.Foo === foo;
   }
 
   // getters and setters
