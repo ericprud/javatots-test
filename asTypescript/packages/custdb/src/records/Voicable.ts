@@ -9,7 +9,14 @@ export class Voicable {
     return "Voicable{" + "type='" + this.type + '\'' + ", number=" + this.number + '}';
   }
 
-  // getters and setters
+  public constructor() {
+  }
+
+  public constructor(type: string, number: number) {
+    this.type = type;
+    this.number = number;
+  }
+
   public setType(type: string): void {
     this.type = type;
   }

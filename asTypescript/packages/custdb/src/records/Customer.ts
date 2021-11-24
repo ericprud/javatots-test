@@ -19,7 +19,14 @@ export class Customer {
     return "Customer{" + "firstName='" + this.firstName + '\'' + ", lastName='" + this.lastName + '\'' + ", age=" + this.age + ", contacts=" + this.contacts + ", addresses=" + this.addresses + '}';
   }
 
-  public checkFoo(/* const */ foo: string): boolean {
+  public checkFoo(/*const*/ foo: string): boolean {
+    let l: Array<Voicable> = new Array<>();
+    l.add(new Voicable("str1", 1));
+    for (const voicable of l) {
+      if (!(voicable instanceof Voicable)) {
+        throw new Error("huh?");
+      }
+    }
     return Constants.Foo === foo;
   }
 

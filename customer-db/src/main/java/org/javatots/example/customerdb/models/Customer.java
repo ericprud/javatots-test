@@ -3,6 +3,7 @@ package org.javatots.example.customerdb.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +31,13 @@ public class Customer {
     }
 
     public boolean checkFoo(final String foo) {
+        List<Voicable> l = new ArrayList<>();
+        l.add(new Voicable("str1", 1));
+        for (Voicable voicable: l) {
+            if (!(voicable instanceof  Voicable)) {
+                throw new Error("huh?");
+            }
+        }
         return Constants.Foo.equals(foo);
     }
 
