@@ -8,7 +8,7 @@ import { Constants } from './Constants';
 
 export class Cli {
 
-  public static main(args: string[]): void /* throws FileNotFoundException */ {
+  public static main(/*const*/ args: string[]): void /* throws FileNotFoundException */ {
     const dir: string = "../../../" + "customer-db/src/main/resources/";
     const c: Customer = new Cli().loadCustomer(dir + "customer.yaml");
     console.log("check foo: " + c.checkFoo(Constants.Foo));
@@ -18,7 +18,7 @@ export class Cli {
     // console.log(writer);
   }
 
-  public loadCustomer(/* readonly */ yamlFilePath: string): Customer /* throws FileNotFoundException */ {
+  public loadCustomer(/*const*/ yamlFilePath: string): Customer /* throws FileNotFoundException */ {
     // const yaml: Yaml = new Yaml();
     const inputStream: Readable = Fs.createReadStream(yamlFilePath);
     return Yaml.load(Fs.readFileSync(yamlFilePath, 'utf-8')) as Customer;
