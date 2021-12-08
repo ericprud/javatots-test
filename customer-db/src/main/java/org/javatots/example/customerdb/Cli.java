@@ -19,6 +19,10 @@ public class Cli {
         System.out.println(writer);
     }
 
+    public Cli() throws FileNotFoundException, ArithmeticException {
+
+    }
+
     public Customer loadCustomer(final String yamlFilePath) throws FileNotFoundException {
         final Yaml yaml = new Yaml();
         final InputStream inputStream = new FileInputStream(yamlFilePath);

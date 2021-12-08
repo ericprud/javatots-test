@@ -18,6 +18,9 @@ export class Cli {
     // console.log(writer);
   }
 
+  public constructor() /* throws FileNotFoundException, ArithmeticException */ {
+  }
+
   public loadCustomer(/*const*/ yamlFilePath: string): Customer /* throws FileNotFoundException */ {
     // const yaml: Yaml = new Yaml();
     const inputStream: Readable = Fs.createReadStream(yamlFilePath);

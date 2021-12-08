@@ -27,7 +27,23 @@ export class Customer {
         throw new Error("huh?");
       }
     }
-    return Constants.Foo === foo;
+    try {
+      if (false)
+        throw new FileNotFoundException();
+      if (false)
+        throw new ClassNotFoundException();
+      return Constants.Foo === foo;
+    } catch (fileError) {
+ if (fileError instanceof FileNotFoundException || fileError instanceof IllegalStateException) {
+      throw new RuntimeException(fileError);
+    } else if (fileError instanceof ClassCastException || fileError instanceof ClassNotFoundException) {
+      let classException: ClassCastException | ClassNotFoundException = (Any) fileError;
+      throw new RuntimeException(classException);
+    } else if (fileError instanceof Error) {
+      let anyError: Error = (Error) fileError;
+      throw anyError;
+    }
+}
   }
 
   // getters and setters

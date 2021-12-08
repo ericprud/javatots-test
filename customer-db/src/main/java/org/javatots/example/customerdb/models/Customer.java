@@ -3,6 +3,7 @@ package org.javatots.example.customerdb.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,19 @@ public class Customer {
                 throw new Error("huh?");
             }
         }
-        return Constants.Foo.equals(foo);
+        try {
+            if (false)
+                throw new FileNotFoundException();
+            if (false)
+                throw new ClassNotFoundException();
+            return Constants.Foo.equals(foo);
+        } catch (FileNotFoundException |IllegalStateException fileError) {
+            throw new RuntimeException(fileError);
+        } catch (ClassCastException|ClassNotFoundException classException) {
+            throw new RuntimeException(classException);
+        } catch (Error anyError) {
+            throw anyError;
+        }
     }
 
     // getters and setters
